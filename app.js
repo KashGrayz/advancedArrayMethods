@@ -160,11 +160,32 @@ let dishes = [
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
 //Filter
 
-function problemTwo(){
-    let answer = prompt('What cuisine sounds best?')
+// function problemTwo(){
+
+//     let answer = prompt('What cuisine sounds best?')
+//     let results = dishes.filter(function(el){
+//         console.log(el)
+//         if (el.cuisine === answer ){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }})
+
+//     return results;
+// }
+
+// let answerFood = problemTwo();
+// console.log('Your selections are :', answerFood)
+
+//3. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
+//Filter
+
+function problemThree(){
+
     let results = dishes.filter(function(el){
         console.log(el)
-        if (el.cuisine === answer ){
+        if(el.cuisine == "Italian" && el.servings < 5){
             return true;
         }
         else{
@@ -174,12 +195,8 @@ function problemTwo(){
     return results;
 }
 
-let answerFood = problemTwo();
-console.log('Your selections are :', answerFood)
-
-//3. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
-//Filter
-
+let servSize = problemThree();
+console.log('This meal should do it', servSize)
 
 
 //4. Create a function that will return only dishes whose id number matches their serving count.
