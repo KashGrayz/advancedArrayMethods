@@ -328,21 +328,36 @@ let dishes = [
 
 //8b. Use the filter method to eliminate duplicate from problem 8a.
 
-function problemEight(){
+// function problemEight(){
 
-    let results = dishes.map(function(el) {
-        return el.cuisine;
-        });
-    return results.filter((item,
-        index)=> results.indexOf(item) === index);
-}
-console.log(problemEight())
+//     let results = dishes.map(function(el) {
+//         return el.cuisine;
+//         });
+//     return results.filter((item,
+//         index)=> results.indexOf(item) === index);
+// }
+// console.log(problemEight())
 
 //11. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
 
+function problemEleven(){
+    let results = dishes.filter(function(el){
+        if(el.ingredients.includes("tomato") || el.ingredients.includes("cheese")){
+            return true;
+        }
+        else{
+            return false;
+        }})
+
+    return results
+}
+
+console.log(problemEleven())
 //12. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
+
+
 
 //13. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
