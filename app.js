@@ -222,28 +222,41 @@ let dishes = [
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
 
-function problemFive(){
-    let results = dishes.filter(function(el){
-        console.log(el)
-        if(el.servings % 2 ==0){
-            return true;
-        }
-        else{
-            return false;
-        }})
+// function problemFive(){
+//     let results = dishes.filter(function(el){
+//         console.log(el)
+//         if(el.servings % 2 ==0){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }})
 
-    return results;
-}
+//     return results;
+// }
 
-let evenServings = problemFive();
-console.log('These are even servings:', evenServings)
+// let evenServings = problemFive();
+// console.log('These are even servings:', evenServings)
 
 //6. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Double Hint: Research 'javascript does array include item'
 //Filter
 
+function problemSix(){
+    let results = dishes.filter(function(el){
+        console.log(el)
+        if(el.ingredients.includes("chickpea")){
+            return true;
+        }
+        else{
+            return false;
+        }})
+    return results;
+}
 
+let chickPea = problemSix();
+console.log('These include chickpeas:', chickPea)
 
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
 //Filter
