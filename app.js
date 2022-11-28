@@ -281,25 +281,47 @@ let dishes = [
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
 
-function problemEight(){
-    let results = dishes.map(function(el) {
-        return el.cuisine;
-        })
-    return results
-}
-console.log(problemEight())
+// function problemEight(){
+//     let results = dishes.map(function(el) {
+//         return el.cuisine;
+//         })
+//     return results
+// }
+// console.log(problemEight())
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
 
+// function problemNine(){
+//     let results = dishes.map(function(el){
+//         return el.cuisine + " " +el.name;
+//     })
+//     return results
+// }
 
-
+// console.log(problemNine())
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
 
 
 
+function problemTen(){
+    let results = dishes.filter(function(el){
+        if(el.cuisine == "Vegetarian"){
+            return true
+        }
+        else{
+            return false;
+        }})
+    return results
+}
 
+let veggieDish = problemTen();
+let add = dishes.map(function(el){
+    return veggieDish + " " + el.name
+    })
+return add
+console.log('Here are your options', veggieDish)
 
 //BONUS
 
