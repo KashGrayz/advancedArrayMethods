@@ -306,6 +306,7 @@ let dishes = [
 
 
 function problemTen(){
+    
     let results = dishes.filter(function(el){
         if(el.cuisine == "Vegetarian"){
             return true
@@ -313,15 +314,15 @@ function problemTen(){
         else{
             return false;
         }})
-    return results
+        let add = results.map(function(el){
+        return `${el.cuisine} ${el.name}`
+        })
+    return add
 }
 
-let veggieDish = problemTen();
-let add = dishes.map(function(el){
-    return veggieDish + " " + el.name
-    })
-return add
-console.log('Here are your options', veggieDish)
+veggieFood = problemTen();
+console.log('Here are your options: ',veggieFood)
+
 
 //BONUS
 
