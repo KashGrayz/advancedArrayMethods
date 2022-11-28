@@ -181,11 +181,32 @@ let dishes = [
 //3. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
 //Filter
 
-function problemThree(){
+// function problemThree(){
+
+//     let results = dishes.filter(function(el){
+//         console.log(el)
+//         if(el.cuisine == "Italian" && el.servings < 5){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }})
+
+//     return results;
+// }
+
+// let servSize = problemThree();
+// console.log('This meal should do it', servSize)
+
+
+//4. Create a function that will return only dishes whose id number matches their serving count.
+//Filter
+
+function problemFour(){
 
     let results = dishes.filter(function(el){
         console.log(el)
-        if(el.cuisine == "Italian" && el.servings < 5){
+        if (el.id == el.servings){
             return true;
         }
         else{
@@ -195,14 +216,8 @@ function problemThree(){
     return results;
 }
 
-let servSize = problemThree();
-console.log('This meal should do it', servSize)
-
-
-//4. Create a function that will return only dishes whose id number matches their serving count.
-//Filter
-
-
+let identical = problemFour();
+console.log('These are Identical:', identical)
 
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
