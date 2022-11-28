@@ -305,28 +305,38 @@ let dishes = [
 
 
 
-function problemTen(){
+// function problemTen(){
     
-    let results = dishes.filter(function(el){
-        if(el.cuisine == "Vegetarian"){
-            return true
-        }
-        else{
-            return false;
-        }})
-        let add = results.map(function(el){
-        return `${el.cuisine} ${el.name}`
-        })
-    return add
-}
+//     let results = dishes.filter(function(el){
+//         if(el.cuisine == "Vegetarian"){
+//             return true
+//         }
+//         else{
+//             return false;
+//         }})
+//         let add = results.map(function(el){
+//         return `${el.cuisine} ${el.name}`
+//         })
+//     return add
+// }
 
-veggieFood = problemTen();
-console.log('Here are your options: ',veggieFood)
+// veggieFood = problemTen();
+// console.log('Here are your options: ',veggieFood)
 
 
 //BONUS
 
 //8b. Use the filter method to eliminate duplicate from problem 8a.
+
+function problemEight(){
+
+    let results = dishes.map(function(el) {
+        return el.cuisine;
+        });
+    return results.filter((item,
+        index)=> results.indexOf(item) === index);
+}
+console.log(problemEight())
 
 //11. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
